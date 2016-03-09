@@ -90,7 +90,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Seamoth Update
+   Core Styles
    ========================================================================== */
 body, html {
 	height: 100%;
@@ -108,71 +108,10 @@ body {
 .loading {
 	background: url('../img/ico_loading.gif') no-repeat center center;
 }
+
 section, .background, .background2 {
 	opacity: 0;
 }
-
-.background {
-    background: #1b5b8b; /* Old browsers */
-    background: -moz-linear-gradient(top,  #1b5b8b 0%, #2471c8 50%, #223261 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #1b5b8b 0%,#2471c8 50%,#223261 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #1b5b8b 0%,#2471c8 50%,#223261 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f90e0', endColorstr='#007b91',GradientType=0 ); /* IE6-9 */
-}
-
-
-/*.background2 {
-    background: url('../img/water_texture.png') center repeat-y;
-    background-size: 100% auto;
-    position: relative;
-}*/
-
-.background-fish {
-    position: absolute;
-}
-
-#peeper {
-    top: 11%;
-    left: 0%;
-}
-
-#boomerang {
-    bottom: 14%;
-    right: 0%;
-}
-
-#gasopod
-{
-    top: 44%;
-    left: 20%;
-}
-
-.container {
-    padding: 5px;
-    position: relative;
-}
-
-.content {
-    margin: 0px auto;
-    padding: 30px;   
-}
-
-.loaded section,
-.no-js section, .loaded .background, .loaded .background2 {
-	opacity: 1;
-	-webkit-transition: opacity 300ms ease-out;
-	-moz-transition: opacity 300ms ease-out;
-	transition: opacity 300ms ease-out;
-}
-
-
-/* Navigation */
-
-
-.content .row {
-    margin-bottom: 75px;
-}
-
 
 h2 {
     font-family: 'Orbitron', sans-serif;
@@ -220,6 +159,45 @@ hr {
     margin: 40px auto;
 }
 
+
+/* ==========================================================================
+   Layout Styles
+   ========================================================================== */
+
+
+.background {
+    background: #1b5b8b; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1b5b8b 0%, #2471c8 50%, #223261 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #1b5b8b 0%,#2471c8 50%,#223261 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #1b5b8b 0%,#2471c8 50%,#223261 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f90e0', endColorstr='#007b91',GradientType=0 ); /* IE6-9 */
+}
+
+
+.container {
+    padding: 5px;
+    position: relative;
+}
+
+.content {
+    margin: 0px auto;
+    padding: 30px;   
+}
+
+.loaded section,
+.no-js section, .loaded .background, .loaded .background2 {
+	opacity: 1;
+	-webkit-transition: opacity 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out;
+	transition: opacity 300ms ease-out;
+}
+
+
+.content .row {
+    margin-bottom: 75px;
+}
+
+
 .content a, .content a:visited {
     color: #7AC2FF;
     text-decoration: none;
@@ -228,29 +206,6 @@ hr {
 .content a:hover, .content a:active {
     color: #C2D1DE;
     text-decoration: none;
-}
-
-.thumbnail  {
-    display: block;
-    position: relative;
-    float: left;
-}
-
-.video_container {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height:100%;
-}
-
-video#bgvid {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
 }
 
 .big-picture-copy {
@@ -290,6 +245,37 @@ video#bgvid {
     color: rgba(255, 255, 255, 1);
 }
 
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.thumbnail  {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.video_container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height:100%;
+}
+
+video#bgvid {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+
 .vid {
     margin:30px;
     -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.6);
@@ -320,6 +306,11 @@ video#bgvid {
     display: inline-block;
 }
 
+.carousel .img-responsive {
+    width: 100%;
+    height: auto;
+}
+
 
 .homeSlide {
     background: #000;
@@ -336,7 +327,31 @@ video#bgvid {
     width: 100vw;
     height: 100vh;
     left: calc(-50vw + 50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+.fullSlide-img {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: calc(-50vw + 50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.big-bg-01 {
+    position: relative;
+    background-image: url('../img/screenshots/abandoned_02.jpg');
+    overflow: hidden;
+}
+
 
 #title-section {
     position: relative;
@@ -393,13 +408,6 @@ video#bgvid {
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
 }
 
-
-.big-bg-01 {
-    position: relative;
-    background-image: url('../img/screenshots/abandoned_02.jpg');
-    overflow: hidden;
-}
-
 .icon-subtitle {
     height: 64px;
     margin-bottom: 20px;
@@ -425,39 +433,7 @@ video#bgvid {
     height:30px;
 }
 
-.pda {
-    position: relative;
-    display: block;
-    width: 960px;
-    height: 630px;
-    background-image:url('../img/pda.png'); 
-    background-size: contain;
-    vertical-align: middle;
-    padding-left: 260px;
-    padding-right: 100px;
-    margin: auto;
-}
-
-@media (min-height: 601px) and (max-height: 768px), (max-width:768px) {
-    .pda {
-        width: 634px;
-        height: 416px;
-        padding-left: 170px;
-        padding-right: 60px;
-    }
-}
-
-@media (max-height: 600px) { 
-    .pda {
-        width: 550px;
-        height: 361px;
-        padding-left: 150px;
-        padding-right: 50px;
-    }
-
- }
-
-/* Slide 10 - AKA FINAL SECTION */
+/* FINAL SECTION STYLES */
 
 #final {
     background-image:url('../img/footer_bg.jpg');;
@@ -477,34 +453,6 @@ video#bgvid {
     color: rgba(255, 255, 255, 0.7);
 }
 
-
-.img-grid {
-    margin: 5px;
-}
-
-.img-grid h3 {
-    color:#484848;
-    margin-top: 2px;
-    margin-bottom: 5px;
-}
-
-.img-grid p {
-    color:#484848;
-    width:auto;
-}
-
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-}
-
-.carousel .img-responsive {
-    width: 100%;
-    height: auto;
-}
-
 .mail-list-form {
     width:60%;
     min-width: 300px;
@@ -522,6 +470,35 @@ video#bgvid {
 
 .footer p {
     width:auto;
+}
+
+
+/* ==========================================================================
+   Utility Styles
+   ========================================================================== */
+
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: @iphone-screen) {
+    .bcg {
+
+        background-attachment: scroll;
+    }
+}
+
+
+.bcg-width {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 .hsContainer {
