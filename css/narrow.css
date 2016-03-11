@@ -365,8 +365,6 @@ video#bgvid {
 
 .fullSlide {
     position: relative;
-    width: 100vw;
-    height: 100vh;
     left: calc(-50vw + 50%);
     background-position: center center;
     background-repeat: no-repeat;
@@ -378,10 +376,6 @@ video#bgvid {
     width: auto;
     height: 100vh;
     left: calc(-50vw + 50%);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 .big-bg-01 {
@@ -402,7 +396,7 @@ video#bgvid {
     margin: auto;
 }
 
-#lights .img-responsive {
+.3col .img-responsive {
     width: 100% !important;
 }
 

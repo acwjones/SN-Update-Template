@@ -11,6 +11,7 @@
 	// Setup variables
 	$window = $(window);
 	$homeSlide = $('.homeSlide');
+	$fullSlide = $('.fullSlide')
 	$body = $('body');
 	htmlbody = $('html,body');
 	
@@ -38,6 +39,9 @@
 		} 
 	    
 	    $homeSlide.height(winH);
+
+		$fullSlide.height(winH);
+	    $fullSlide.width(winW);
 	    
 	}
 		
